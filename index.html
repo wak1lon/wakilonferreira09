@@ -1,0 +1,677 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wakilon Ferreira | Especialista em Tráfego Pago</title>
+    <meta name="description" content="Aumente suas vendas online com estratégias de tráfego pago em todas as plataformas. Consultoria especializada para alavancar seu negócio.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #FFD700;
+            --primary-dark: #FFC000;
+            --dark: #333333;
+            --light: #FFFFFF;
+            --gray: #F5F5F5;
+            --dark-gray: #777777;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Open Sans', sans-serif;
+            color: var(--dark);
+            line-height: 1.6;
+            background-color: var(--light);
+        }
+        
+        h1, h2, h3, h4 {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 700;
+            line-height: 1.2;
+        }
+        
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        /* Header */
+        header {
+            background-color: var(--light);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+        
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 0;
+        }
+        
+        .logo {
+            font-size: 24px;
+            font-weight: 700;
+            color: var(--dark);
+            text-decoration: none;
+        }
+        
+        .logo span {
+            color: var(--primary);
+        }
+        
+        .cta-button {
+            background-color: var(--primary);
+            color: var(--dark);
+            padding: 12px 25px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+            display: inline-block;
+        }
+        
+        .cta-button:hover {
+            background-color: var(--primary-dark);
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(255, 200, 0, 0.3);
+        }
+        
+        /* Hero Section */
+        .hero {
+            padding: 180px 0 100px;
+            background: linear-gradient(135deg, rgba(255,215,0,0.1) 0%, rgba(255,255,255,1) 100%);
+            text-align: center;
+        }
+        
+        .hero h1 {
+            font-size: 42px;
+            margin-bottom: 20px;
+            color: var(--dark);
+        }
+        
+        .hero h1 span {
+            color: var(--primary);
+        }
+        
+        .hero p {
+            font-size: 20px;
+            max-width: 700px;
+            margin: 0 auto 40px;
+            color: var(--dark-gray);
+        }
+        
+        .hero-image {
+            max-width: 800px;
+            margin: 40px auto 0;
+            border-radius: 10px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+            overflow: hidden;
+        }
+        
+        .hero-image img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+        
+        /* Services Section */
+        .services {
+            padding: 100px 0;
+            background-color: var(--gray);
+        }
+        
+        .section-title {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+        
+        .section-title h2 {
+            font-size: 36px;
+            position: relative;
+            display: inline-block;
+            padding-bottom: 15px;
+        }
+        
+        .section-title h2:after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 3px;
+            background-color: var(--primary);
+        }
+        
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+        
+        .service-card {
+            background-color: var(--light);
+            border-radius: 10px;
+            padding: 30px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            transition: all 0.3s ease;
+        }
+        
+        .service-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+        }
+        
+        .service-card h3 {
+            font-size: 22px;
+            margin-bottom: 15px;
+            color: var(--dark);
+        }
+        
+        .service-card p {
+            color: var(--dark-gray);
+            margin-bottom: 20px;
+        }
+        
+        .service-icon {
+            font-size: 40px;
+            color: var(--primary);
+            margin-bottom: 20px;
+        }
+        
+        /* Analytics Section */
+        .analytics {
+            padding: 100px 0;
+            background-color: var(--light);
+        }
+        
+        .analytics-container {
+            display: flex;
+            align-items: center;
+            gap: 50px;
+        }
+        
+        .analytics-content {
+            flex: 1;
+        }
+        
+        .analytics-content h2 {
+            font-size: 36px;
+            margin-bottom: 20px;
+        }
+        
+        .analytics-content p {
+            color: var(--dark-gray);
+            margin-bottom: 30px;
+            font-size: 18px;
+        }
+        
+        .analytics-image {
+            flex: 1;
+            position: relative;
+        }
+        
+        .analytics-image img {
+            width: 100%;
+            border-radius: 10px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+        }
+        
+        .metrics {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+            margin-top: 30px;
+        }
+        
+        .metric-box {
+            background-color: var(--gray);
+            padding: 20px;
+            border-radius: 8px;
+            text-align: center;
+        }
+        
+        .metric-value {
+            font-size: 32px;
+            font-weight: 700;
+            color: var(--primary);
+            margin-bottom: 5px;
+        }
+        
+        .metric-label {
+            font-size: 14px;
+            color: var(--dark-gray);
+        }
+        
+        /* Form Section */
+        .form-section {
+            padding: 100px 0;
+            background: linear-gradient(135deg, rgba(255,215,0,0.1) 0%, rgba(255,255,255,1) 100%);
+        }
+        
+        .form-container {
+            max-width: 800px;
+            margin: 0 auto;
+            background-color: var(--light);
+            border-radius: 10px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+            overflow: hidden;
+        }
+        
+        .form-header {
+            background-color: var(--primary);
+            padding: 30px;
+            text-align: center;
+        }
+        
+        .form-header h2 {
+            color: var(--dark);
+            font-size: 28px;
+        }
+        
+        .form-body {
+            padding: 40px;
+        }
+        
+        .form-group {
+            margin-bottom: 25px;
+        }
+        
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 600;
+            color: var(--dark);
+        }
+        
+        .form-control {
+            width: 100%;
+            padding: 15px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 16px;
+            transition: all 0.3s ease;
+        }
+        
+        .form-control:focus {
+            border-color: var(--primary);
+            outline: none;
+            box-shadow: 0 0 0 3px rgba(255, 215, 0, 0.2);
+        }
+        
+        textarea.form-control {
+            min-height: 120px;
+            resize: vertical;
+        }
+        
+        .submit-btn {
+            width: 100%;
+            padding: 15px;
+            background-color: var(--primary);
+            color: var(--dark);
+            border: none;
+            border-radius: 5px;
+            font-size: 18px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        
+        .submit-btn:hover {
+            background-color: var(--primary-dark);
+        }
+        
+        /* WhatsApp Button */
+        .whatsapp-button {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background-color: #25D366;
+            color: white;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 30px;
+            box-shadow: 0 5px 15px rgba(37, 211, 102, 0.3);
+            z-index: 999;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+        
+        .whatsapp-button:hover {
+            transform: scale(1.1);
+            box-shadow: 0 8px 25px rgba(37, 211, 102, 0.4);
+        }
+        
+        /* Footer */
+        footer {
+            background-color: var(--dark);
+            color: var(--light);
+            padding: 60px 0 20px;
+        }
+        
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+        
+        .footer-column h3 {
+            font-size: 20px;
+            margin-bottom: 20px;
+            color: var(--primary);
+        }
+        
+        .footer-column p, .footer-column a {
+            color: #bbbbbb;
+            margin-bottom: 10px;
+            display: block;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+        
+        .footer-column a:hover {
+            color: var(--primary);
+        }
+        
+        .footer-bottom {
+            text-align: center;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            color: #bbbbbb;
+            font-size: 14px;
+        }
+        
+        .footer-bottom a {
+            color: var(--primary);
+            text-decoration: none;
+        }
+        
+        /* Thank You Page */
+        .thank-you {
+            text-align: center;
+            padding: 150px 20px;
+        }
+        
+        .thank-you h1 {
+            font-size: 48px;
+            color: var(--primary);
+            margin-bottom: 20px;
+        }
+        
+        .thank-you p {
+            font-size: 20px;
+            max-width: 600px;
+            margin: 0 auto 40px;
+        }
+        
+        .checkmark {
+            font-size: 80px;
+            color: var(--primary);
+            margin-bottom: 30px;
+        }
+        
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 32px;
+            }
+            
+            .hero p {
+                font-size: 18px;
+            }
+            
+            .analytics-container {
+                flex-direction: column;
+            }
+            
+            .section-title h2 {
+                font-size: 28px;
+            }
+            
+            .thank-you h1 {
+                font-size: 36px;
+            }
+            
+            .thank-you p {
+                font-size: 18px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <nav>
+                <a href="#" class="logo">Wakilon<span>Ferreira</span></a>
+                <a href="#consultoria" class="cta-button">Agendar Consultoria</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <h1>Transforme seu <span>negócio digital</span> com estratégias de tráfego que convertem</h1>
+            <p>Especialista em tráfego pago com foco em resultados reais para seu negócio. Aumente suas vendas e visibilidade com campanhas otimizadas.</p>
+            <a href="#consultoria" class="cta-button">Quero mais clientes!</a>
+            
+            <div class="hero-image">
+                <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Dashboard de análise de dados">
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services">
+        <div class="container">
+            <div class="section-title">
+                <h2>Meus Serviços</h2>
+            </div>
+            
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">📈</div>
+                    <h3>Tráfego Pago</h3>
+                    <p>Campanhas otimizadas em todas as plataformas (Google Ads, Facebook, Instagram, TikTok) para levar clientes qualificados ao seu negócio.</p>
+                    <a href="#consultoria" class="cta-button">Saiba mais</a>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">🛒</div>
+                    <h3>Vendas Online</h3>
+                    <p>Estratégias comprovadas para aumentar suas conversões e transformar visitantes em clientes pagantes.</p>
+                    <a href="#consultoria" class="cta-button">Saiba mais</a>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">📍</div>
+                    <h3>Tráfego Local</h3>
+                    <p>Atraia clientes da sua região com campanhas geolocalizadas que destacam seu negócio para quem realmente importa.</p>
+                    <a href="#consultoria" class="cta-button">Saiba mais</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Analytics Section -->
+    <section class="analytics">
+        <div class="container">
+            <div class="analytics-container">
+                <div class="analytics-content">
+                    <h2>Resultados Mensuráveis que Fazem a Diferença</h2>
+                    <p>Utilizo as melhores ferramentas do mercado para analisar, otimizar e garantir que cada centavo investido em tráfego pago traga o máximo retorno possível.</p>
+                    
+                    <div class="metrics">
+                        <div class="metric-box">
+                            <div class="metric-value">+300%</div>
+                            <div class="metric-label">Aumento no ROI</div>
+                        </div>
+                        <div class="metric-box">
+                            <div class="metric-value">-50%</div>
+                            <div class="metric-label">Redução no Custo por Lead</div>
+                        </div>
+                        <div class="metric-box">
+                            <div class="metric-value">+5x</div>
+                            <div class="metric-label">Mais Conversões</div>
+                        </div>
+                        <div class="metric-box">
+                            <div class="metric-value">24/7</div>
+                            <div class="metric-label">Monitoramento</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="analytics-image">
+                    <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Análise de dados e métricas">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Form Section -->
+    <section class="form-section" id="consultoria">
+        <div class="container">
+            <div class="form-container">
+                <div class="form-header">
+                    <h2>Agende sua Consultoria Gratuita</h2>
+                </div>
+                
+                <div class="form-body">
+                    <form id="consultation-form" action="https://formsubmit.co/wakilonferreira12000@gmail.com" method="POST">
+                        <input type="hidden" name="_subject" value="Novo Lead - Consultoria Wakilon Ferreira">
+                        <input type="hidden" name="_next" value="https://seusite.com/obrigado.html">
+                        <input type="hidden" name="_captcha" value="false">
+                        
+                        <div class="form-group">
+                            <label for="name">Seu Nome</label>
+                            <input type="text" id="name" name="name" class="form-control" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="email">Seu Melhor Email</label>
+                            <input type="email" id="email" name="email" class="form-control" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="phone">WhatsApp (com DDD)</label>
+                            <input type="tel" id="phone" name="phone" class="form-control" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="business">Qual seu negócio?</label>
+                            <input type="text" id="business" name="business" class="form-control" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="message">Como posso te ajudar?</label>
+                            <textarea id="message" name="message" class="form-control"></textarea>
+                        </div>
+                        
+                        <button type="submit" class="submit-btn">Agendar Consultoria Gratuita</button>
+                        
+                        <p style="margin-top: 15px; font-size: 14px; color: var(--dark-gray);">
+                            Ao enviar, você concorda com nossa <a href="#politica-privacidade" style="color: var(--primary);">Política de Privacidade</a>.
+                        </p>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- WhatsApp Button -->
+    <a href="https://wa.me/5545991472077" class="whatsapp-button" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>Wakilon Ferreira</h3>
+                    <p>Especialista em Tráfego Pago e Vendas Online. Ajudo negócios a alcançarem mais clientes e aumentarem suas vendas através de estratégias digitais comprovadas.</p>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Contato</h3>
+                    <a href="tel:+5545991472077">(45) 99147-2077</a>
+                    <a href="mailto:wakilonferreira12000@gmail.com">wakilonferreira12000@gmail.com</a>
+                    <p>Medianeira - PR</p>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Links Úteis</h3>
+                    <a href="#politica-privacidade">Política de Privacidade</a>
+                    <a href="#termos-uso">Termos de Uso</a>
+                    <a href="#politica-reembolso">Política de Reembolso</a>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2023 Wakilon Ferreira Marketing Digital. CNPJ: 52.563.390/0001-01. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Font Awesome for WhatsApp icon -->
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-XXXXXX');</script>
+    <!-- End Google Tag Manager -->
+    
+    <!-- Facebook Pixel Code -->
+    <script>
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)}(window, document,'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', 'FB_PIXEL_ID');
+    fbq('track', 'PageView');
+    </script>
+    <noscript><img height="1" width="1" style="display:none"
+    src="https://www.facebook.com/tr?id=FB_PIXEL_ID&ev=PageView&noscript=1"
+    /></noscript>
+    <!-- End Facebook Pixel Code -->
+    
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-XXXXXX-X"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'UA-XXXXXX-X');
+    </script>
+    <!-- End Google Analytics -->
+</body>
+</html>
